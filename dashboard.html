@@ -49,11 +49,11 @@
             <p class="text-large">Your projects</p>
           </div>
           <div class="card-wrapper">
-            <div class="card">
+            <div class="card" id="card">
               <div class="card-content">
-                <p class="text-medium">Super cool project</p>
+                <p class="text-medium" id="title">Super cool project</p>
                 <div class="spacer-small"></div>
-                <p class="text-small">
+                <p class="text-small" id="content">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
@@ -67,11 +67,11 @@
                 </div>
               </div>
             </div>
-            <div class="card">
+            <div class="card" id="card">
               <div class="card-content">
-                <p class="text-medium">Super cool project</p>
+                <p class="text-medium" id="title">Super cool project</p>
                 <div class="spacer-small"></div>
-                <p class="text-small">
+                <p class="text-small" id="content">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
@@ -85,11 +85,11 @@
                 </div>
               </div>
             </div>
-            <div class="card">
+            <div class="card" id="card">
               <div class="card-content">
-                <p class="text-medium">Super cool project</p>
+                <p class="text-medium" id="title">Super cool project</p>
                 <div class="spacer-small"></div>
-                <p class="text-small">
+                <p class="text-small" id="content">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
@@ -103,11 +103,11 @@
                 </div>
               </div>
             </div>
-            <div class="card">
+            <div class="card" id="card">
               <div class="card-content">
-                <p class="text-medium">Super cool project</p>
+                <p class="text-medium" id="title">Super cool project</p>
                 <div class="spacer-small"></div>
-                <p class="text-small">
+                <p class="text-small" id="content">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
@@ -121,11 +121,11 @@
                 </div>
               </div>
             </div>
-            <div class="card">
+            <div class="card" id="card">
               <div class="card-content">
-                <p class="text-medium">Super cool project</p>
+                <p class="text-medium" id="title">Super cool project</p>
                 <div class="spacer-small"></div>
-                <p class="text-small">
+                <p class="text-small" id="content">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
@@ -139,11 +139,11 @@
                 </div>
               </div>
             </div>
-            <div class="card">
+            <div class="card" id="card">
               <div class="card-content">
-                <p class="text-medium">Super cool project</p>
+                <p class="text-medium" id="title">Super cool project</p>
                 <div class="spacer-small"></div>
-                <p class="text-small">
+                <p class="text-small" id="content">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
@@ -218,7 +218,7 @@
             </div>
           </div>
           <div class="buttons-wrapper">
-            <button>New</button>
+            <button id="btn">New</button>
             <button>Upload</button>
             <button>Share</button>
           </div>
@@ -226,4 +226,36 @@
       </header>
     </div>
   </body>
+  <script>
+    const btn = document.querySelector("#btn");
+    const title = document.querySelector("#title");
+    const content = document.querySelector("#content");
+    btn.addEventListener("mouseover", function () {
+      btn.style.backgroundColor = "blue";
+      btn.textContent = "Get off!";
+    });
+    btn.addEventListener("mouseout", function () {
+      btn.style.backgroundColor = "lightseagreen";
+    });
+
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((card) => {
+      card.addEventListener("mouseover", function () {
+        card.style.backgroundColor = "lightseagreen";
+        const title = card.querySelector(".text-medium");
+        const content = card.querySelector(".text-small");
+        title.style.color = "white";
+        card.style.borderLeft = "6px solid red";
+        content.style.color = "white";
+      });
+      card.addEventListener("mouseout", function () {
+        card.style.backgroundColor = "white";
+        const title = card.querySelector(".text-medium");
+        const content = card.querySelector(".text-small");
+        title.style.color = "black";
+        card.style.borderLeft = "6px solid transparent";
+        content.style.color = "black";
+      });
+    });
+  </script>
 </html>
