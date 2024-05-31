@@ -259,29 +259,50 @@
     });
 
     /* learning objects*/
-    const person = {
-      firstName: "heni",
-      secondName: "Hcini",
-      age: 30,
-      isEmployed: true,
-      sayHello: function () {
-        console.log("Hi! I'm heni");
-      },
-      eat: function () {
-        console.log("I'm eating a krabby Patty");
-      },
-    };
-    person.sayHello();
-    person.eat();
-    console.log(person.firstName);
-    console.log(person.secondName);
-    const person2 = {
-      firstName: "Firas",
-      secondName: "Mechmech",
-      age: 32,
-      isEmployed: true,
-    };
-    console.log(person2.firstName);
-    console.log(person2.secondName);
+    // const person = {
+    //   firstName: "heni",
+    //   secondName: "Hcini",
+    //   age: 30,
+    //   isEmployed: true,
+    //   sayHello: function () {
+    //     console.log("Hi! I'm heni");
+    //   },
+    //   eat: function () {
+    //     console.log("I'm eating a krabby Patty");
+    //   },
+    // };
+    // person.sayHello();
+    // person.eat();
+    // console.log(person.firstName);
+    // console.log(person.secondName);
+    // const person2 = {
+    //   firstName: "Firas",
+    //   secondName: "Mechmech",
+    //   age: 32,
+    //   isEmployed: true,
+    // };
+    // console.log(person2.firstName);
+    // console.log(person2.secondName);
+    /* learning String functions*/
+
+    // let fullName = "Heni+Hcini";
+    // let firstName;
+    // firstName = fullName.slice(0, fullName.indexOf("+"));
+    // console.log(firstName);
+    // let lastName;
+    // lastName = fullName.slice(fullName.indexOf("+") + 1);
+    // console.log(lastName);
+
+    function checkWinner(win) {
+      win ? console.log("you win") : console.log("you lose");
+    }
+
+    checkWinner(false);
+
+    function checkAge(age) {
+      return age >= 18 ? true : false;
+    }
+    let adult= checkAge(18);
+    console.log(adult);
   </script>
 </html>
